@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive bootstrap landing template">
+    <meta name="author" content="Coderthemes">
+
+    <!-- <link rel="shortcut icon" href="https://coderthemes.com/metrico/images/favicon.ico"> -->
+
+    <title>CTF协会</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="css/icons-social.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <nav
+        class="navbar navbar-expand-lg fixed-top navbar-custom navbar-default navbar-light navbar-custom-dark sticky">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/logo1.png" class="logo logo-white" alt="logo">
+                <img src="images/logo1.png" class="logo logo-dark" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav ml-auto navbar-center" id="mySidenav">
+                    <li class="nav-item">
+                        <a href="index.html#home" class="nav-link scroll" style="color: black;">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#platform" class="nav-link scroll" style="color: black;">协会相关平台</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#writings" class="nav-link scroll" style="color: black;">文章</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#activity" class="nav-link scroll" style="color: black;">相关活动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#achievement" class="nav-link scroll" style="color: black;">成果</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#team" class="nav-link scroll" style="color: black;">负责人</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="index.html#pricing" class="nav-link scroll">Pricing</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link scroll">联系我们</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<div style="height: 100px;"></div>
+
+    <div class="clearfix"></div>
+
+
+	<div class="row">
+
+		<div id="content" class="offset-lg-2 col-8" style="background-color: rgb(242, 242, 242);">正在打开文章，请稍后</div>
+
+        <!--
+            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        -->
+
+        <script src="js/marked.min.js"></script>
+        <script src="js/jquery-3.0.0.min.js"></script>
+
+		<script>
+
+            function getQueryVariable(variable)
+            {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+            }
+
+            mdpath = getQueryVariable("mdpath");
+
+            if(mdpath==false){
+                mdpath=localStorage.getItem('readmd');
+            }else{
+                localStorage.setItem('readmd', mdpath);
+            }
+
+            console.log(mdpath);
+
+            $.ajax(mdpath, {
+                method: 'GET',
+                success:function (result) {
+                    document.getElementById('content').innerHTML = marked.parse(result);
+                },
+                error:function (err) {
+                    console.log(err);
+                    document.getElementById('content').innerHTML = err.responseText + "<br> 请检查路径[" + mdpath + "]是否正确";
+                }
+            });
+
+           
+            document.getElementById('content').innerHTML = marked.parse(xhr.responseText);
+		</script>
+
+	</div>
+
+
+    <footer class="bg-dark footer-one">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 p-b-40">
+                    <img src="images/logo1.png" alt="logo" class="footer-logo" height="40">
+                    <p class="about-text">四川大学CTF协会创建于2018年，是网络空间安全学院下的第一个学生社团。</p>
+
+                    <p class="about-text">我们致力于网络空间安全研究，给对安全有兴趣的同学提供一个合作、交流、学习的平台。</p>
+                </div>
+
+                <!-- <div class="col-lg-2">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="index.html">Services</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="col-lg-2 p-b-40">
+                    <h5>相关链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://wiki.scuctf.com/doku.php">Wiki</a></li>
+                        <li><a href="http://47.100.5.139/">练习平台</a></li>
+                        <!-- <li><a href="index.html">Terms &amp; Conditions</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <div>
+                        <h5>联系我们</h5>
+                        <ul class="list-unstyled">
+                            <li><strong class="font-secondary font-14">地址：</strong> 四川大学网络空间安全学院</li>
+                            <!-- <li><strong class="font-secondary font-14">Phone:</strong> (123) 456-7890, 123-4567 89 </li> -->
+                            <li><strong class="font-secondary font-14">Email:</strong> <a
+                                    href="mailto:example@example.com">example@example.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- end row -->
+        </div>
+
+
+		
+
+
+        <!-- end container -->
+
+        <div class="footer-one-alt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="m-b-0 font-13 copyright">© 2018 - 2018 SCU-CTF协会</p>
+                    </div>
+                    <!-- <div class="col-sm-6">
+                        <ul class="list-inline footer-social-one m-b-0 float-right">
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-skype"></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery easing -->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <!--sticky header-->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <!--common script for all pages-->
+    <script src="js/jquery.app.js"></script>
+
+    <script type="text/javascript">
+        //sticky header on scroll
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 50) {
+                $(".sticky").addClass("is-sticky");
+            } else {
+                $(".sticky").removeClass("is-sticky");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

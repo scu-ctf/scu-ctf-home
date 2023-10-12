@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive bootstrap landing template">
+    <meta name="author" content="Coderthemes">
+
+    <!-- <link rel="shortcut icon" href="https://coderthemes.com/metrico/images/favicon.ico"> -->
+
+    <title>CTF协会</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="css/icons-social.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <nav
+        class="navbar navbar-expand-lg fixed-top navbar-custom navbar-default navbar-light navbar-custom-dark bg-trans sticky">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand logo" href="index.html">
+                <img src="images/logo1.png" class="logo logo-white" alt="logo">
+                <img src="images/logo1.png" class="logo logo-dark" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav ml-auto navbar-center" id="mySidenav">
+                    <li class="nav-item">
+                        <a href="index.html#home" class="nav-link scroll">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#platform" class="nav-link scroll">协会相关平台</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#writings" class="nav-link scroll">文章</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#activity" class="nav-link scroll">相关活动</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#achievement" class="nav-link scroll">成果</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#team" class="nav-link scroll">负责人</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="index.html#pricing" class="nav-link scroll">Pricing</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link scroll">联系我们</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="section-lg home-alt bg-img-1" id="home">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="home-wrapper text-center">
+                        <p class="text-muted">欢迎访问 SCU-CTF 协会的主页，SCU-CTF
+                            协会隶属于四川大学网络空间安全学院，致力于研究网络空间安全的相关内容，并积极组织协会成员参加国内各类安全竞赛。
+                        </p>
+                        <p>
+                            如果你想要加入进来，请让我们看到你闪光的地方！无论你是萌新小白还是学有所成，我们都欢迎你的到来！
+                        </p>
+                        <p> qq群：861091027 </p>
+                        <h1>SCU-CTF协会</h1>
+                        <a href="index.html" class="btn btn-custom">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="clearfix"></div>
+
+    <script>
+        
+        //跳转到md阅读界面
+        function to_readmd(url) {
+            console.log(url);
+
+            //保存要访问的md到本地存储，以便后续界面渲染
+            localStorage.setItem('readmd', url);
+
+            //跳转
+            window.location.href="/article.html?mdpath="+url;
+        }
+
+
+    </script>
+
+
+    <section class="section" id="platform">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title">协会相关平台</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="#" style="color: black;">
+                        <div class="features-box features-box-fill text-center">
+                            <img src="./images/401.png" class="img-fluid">
+                            <h3>0X401战队官网</h3>
+                            <p class="text-muted"></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-4">
+                    <a href="#" style="color: black;">
+                        <div class="features-box features-box-fill text-center">
+                            <img src="./images/401.png" class="img-fluid">
+                            <h3>SCUCTF知识库</h3>
+
+                            <p class="text-muted"></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-4">
+                    <a href="#" style="color: black;">
+                        <div class="features-box features-box-fill text-center">
+                            <img src="./images/401.png" class="img-fluid">
+                            <h3>SCUCTF训练与比赛平台</h3>
+
+                            <p class="text-muted"></p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 offset-sm-1">
+                        <img src="images/coworker1.jpg" class="img-fluid d-block">
+                    </div>
+                </div>
+            </div>
+        </section>
+    -->
+
+    <section class="section bg-white padding-b-0" id="writings">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title">文章</h2>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a onclick='to_readmd("/writings/test.md")'>TEST</a><br>
+                <a onclick='to_readmd("/writings/test.md")'>TEST</a><br>
+                <a onclick='to_readmd("/writings/test.md")'>TEST</a><br>
+                <a onclick='to_readmd("/writings/test.md")'>TEST</a><br>
+                <a onclick='to_readmd("/writings/test.md")'>TEST</a><br>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section bg-white padding-b-0" id="activity">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title">社团举办的相关活动</h2>
+                    <p class="title-alt">社团会不定时举行相关活动</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="images/works/1.jpg" alt="work-thumbnail" width="500" height="313" class="thumb-img"
+                        style="border-radius: 20px;">
+
+                    <div class="text-center">
+                        <h4><a onclick='to_readmd("/activity/新生赛.md")'>SCUCTF新生赛</a></h4>
+                        <p><b>点击链接了解详情</b></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <img src="images/works/1.jpg" alt="work-thumbnail" width="500" height="313" class="thumb-img"
+                        style="border-radius: 20px;">
+                    <div class="text-center">
+                        <h4><a onclick='to_readmd("/activity/校赛.md")'>SCUCTF校赛</a></h4>
+                        <p><b>点击链接了解详情</b></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="images/works/1.jpg" alt="work-thumbnail" width="500" height="313" class="thumb-img"
+                        style="border-radius: 20px;">
+
+                    <div class="text-center">
+                        <h4><a onclick='to_readmd("/activity/讲座.md")'>CTF讲座</a></h4>
+                        <p><b>点击链接了解详情</b></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <img src="images/works/1.jpg" alt="work-thumbnail" width="500" height="313" class="thumb-img"
+                        style="border-radius: 20px;">
+
+                    <div class="text-center">
+                        <h4><a onclick='to_readmd("/activity/杂项.md")'>杂项</a></h4>
+                        <p><b>点击链接了解详情</b></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section bg-white padding-b-0" id="achievement">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title">成果</h2>
+                </div>
+            </div>
+
+            <div class="text-center row">
+
+                <div class="col-6">
+
+                    全国大学生信息安全竞赛总决赛二等奖<br>
+                    2022.08<br>
+                    第六届“强网杯”全国网络安全挑战赛：三等奖<br>
+                    2022.08<br>
+                    全国大学生信息安全竞赛分区赛西南赛区一等奖<br>
+                    2022.07<br>
+                    2022 DSCTF首届数字空间安全攻防大赛决赛三等奖<br>
+                    2022.06<br>
+                    2022年蚂蚁集团安全响应中心D^3CTF三等奖<br>
+                    2022.03<br>
+                    2021年第五届“强网杯”全国网络安全挑战赛人工智能挑战赛二等奖<br>
+                    2021.10<br>
+                    2021年“羊城杯”网络安全大赛一等奖<br>
+                    2021.09<br>
+                    全国大学生信息安全竞赛总决赛二等奖<br>
+                    2021.06<br>
+                </div>
+                <div class="col-6">
+                    全国大学生信息安全竞赛分区赛西南赛区特等奖<br>
+                    2021.05<br>
+                    第五届“强网杯”全国网络安全挑战赛：三等奖<br>
+                    2021.06<br>
+                    四川省信息安全大赛：一等奖<br>
+                    2019.09<br>
+                    国家网络安全宣传周"第五空间大赛":三等奖+<br>
+                    2019.10<br>
+                    全国大学生信息安全竞赛分区赛特等奖<br>
+                    2020.9<br>
+                    全国大学生信息安全竞赛总决赛一等奖<br>
+                    2020.10<br>
+                    XCTF-CyBRICS国际赛：全球51名+<br>
+                    2020.07<br>
+                    XCTF-WMCTF国际赛：一等奖<br>
+                    2020.8<br>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <section class="section bg-white" id="team">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title">会长与指导老师</h2>
+                    <p class="title-alt">协会负责人</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-box text-center">
+                        <img src="images/team/team-1.jpg" width="140" height="140"
+                            class="img-fluid mx-auto d-block rounded-circle">
+
+                        <h4>XXX</h4>
+                        <p>会长</p>
+                        <ul class="list-inline footer-social-one team-member-social m-b-0">
+                            <!-- <li class="list-inline-item"><a href="index.html#"><i class="pe-so-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-linkedin"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="team-box text-center">
+                        <img src="images/team/team-2.jpg" width="140" height="140"
+                            class="img-fluid mx-auto d-block rounded-circle">
+
+                        <h4>黄诚</h4>
+                        <p>指导老师</p>
+                        <ul class="list-inline footer-social-one team-member-social m-b-0">
+                            <!-- <li class="list-inline-item"><a href="index.html#"><i class="pe-so-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-linkedin"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="team-box text-center">
+                        <img src="images/team/team-3.jpg" width="140" height="140"
+                            class="img-fluid mx-auto d-block rounded-circle">
+
+                        <h4>XXX</h4>
+                        <p>副会长</p>
+                        <ul class="list-inline footer-social-one team-member-social m-b-0">
+                            <!-- <li class="list-inline-item"><a href="index.html#"><i class="pe-so-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-linkedin"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- <section class="section padding-b-0" id="pricing">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title">Simple Pricing</h2>
+                    <p class="title-alt">Looks beautiful & ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &
+                        all <br /> others graphics are optimized.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="row">
+
+                       
+    <article class="pricing-column col-lg-4">
+        <div class="inner-box">
+            <div class="plan-header text-center">
+                <h3 class="plan-title">Basic</h3>
+                <h2 class="plan-price">$19</h2>
+                <div class="plan-duration">Per Month</div>
+            </div>
+            <ul class="plan-stats list-unstyled">
+                <li> <i class="pe-7s-server"></i>10 GB Storege</li>
+                <li> <i class="pe-7s-graph"></i>500 GB Bandwidth</li>
+                <li> <i class="pe-7s-mail-open"></i>Email Support</li>
+                <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+            </ul>
+
+            <div class="text-center">
+                <a href="index.html#" class="btn btn-sm btn-dark">Signup Now</a>
+            </div>
+        </div>
+    </article>
+
+    
+    <article class="pricing-column col-lg-4">
+        <div class="inner-box active">
+            <div class="plan-header text-center">
+                <h3 class="plan-title">Premium</h3>
+                <h2 class="plan-price">$29</h2>
+                <div class="plan-duration">Per Month</div>
+            </div>
+            <ul class="plan-stats list-unstyled">
+                <li> <i class="pe-7s-server"></i>10 GB Storege</li>
+                <li> <i class="pe-7s-graph"></i>500 GB Bandwidth</li>
+                <li> <i class="pe-7s-mail-open"></i>Email Support</li>
+                <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+            </ul>
+
+            <div class="text-center">
+                <a href="index.html#" class="btn btn-sm btn-dark">Signup Now</a>
+            </div>
+        </div>
+    </article>
+
+   
+    <article class="pricing-column col-lg-4">
+        <div class="inner-box">
+            <div class="plan-header text-center">
+                <h3 class="plan-title">Developer</h3>
+                <h2 class="plan-price">$39</h2>
+                <div class="plan-duration">Per Month</div>
+            </div>
+            <ul class="plan-stats list-unstyled">
+                <li> <i class="pe-7s-server"></i>10 GB Storege</li>
+                <li> <i class="pe-7s-graph"></i>500 GB Bandwidth</li>
+                <li> <i class="pe-7s-mail-open"></i>Email Support</li>
+                <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+            </ul>
+
+            <div class="text-center">
+                <a href="index.html#" class="btn btn-sm btn-dark">Signup Now</a>
+            </div>
+        </div>
+    </article>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </section> -->
+
+
+    <!-- <section class="section" id="clients">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12">
+                    <h2 class="title">Trusted by Thousands</h2>
+                    <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipis.</p>
+                    <ul class="list-inline client-list">
+                        <li class="list-inline-item"><a href="index.html" title="Microsoft"><img src="images/clients/microsoft.png"
+                                    alt="clients"></a></li>
+                        <li class="list-inline-item"><a href="index.html" title="Google"><img src="images/clients/google.png"
+                                    alt="clients"></a></li>
+                        <li class="list-inline-item"><a href="index.html" title="Instagram"><img src="images/clients/instagram.png"
+                                    alt="clients"></a></li>
+                        <li class="list-inline-item"><a href="index.html" title="Converse"><img src="images/clients/converse.png"
+                                    alt="clients"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <section class="section bg-white" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class=" text-center">
+                        <h2 class="title">联系我们</h2>
+                        <p class="title-alt">
+                            <pre>
+社团邮箱：example@example.com
+
+                        </pre>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons,
+                            Fonts &amp; all <br> others graphics are optimized.</p>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+                            <form role="form" name="ajax-form" id="ajax-form" action="https://formsubmit.io/send/coderthemes@gmail.com"
+                                method="post" class="contact-form ">
+
+                                <div class="form-group col-sm-12">
+                                    <input class="form-control" id="name2" name="name" placeholder="Your name" type="text"
+                                        value="">
+                                    <div class="error" id="err-name" style="display: none;">Please enter name</div>
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <input class="form-control" id="email2" name="email" type="text" placeholder="Your email"
+                                        value="">
+                                    <div class="error" id="err-emailvld" style="display: none;">E-mail is not a valid
+                                        format</div>
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <textarea class="form-control" id="message2" name="message" rows="5" placeholder="Message"></textarea>
+                                    <div class="error" id="err-message" style="display: none;">Please enter message</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="ajaxsuccess" class="text-success">E-mail was successfully sent.</div>
+                                        <div class="error text-center" id="err-form" style="display: none;">There was a
+                                            problem validating the form please check!</div>
+                                        <div class="error" id="err-timedout">The connection to the server timed out!</div>
+                                        <div class="error" id="err-state"></div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-dark" id="send">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+    </section> -->
+
+
+
+    <footer class="bg-dark footer-one">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 p-b-40">
+                    <img src="images/logo1.png" alt="logo" class="footer-logo" height="40">
+                    <p class="about-text">四川大学CTF协会创建于2018年，是网络空间安全学院下的第一个学生社团。</p>
+
+                    <p class="about-text">我们致力于网络空间安全研究，给对安全有兴趣的同学提供一个合作、交流、学习的平台。</p>
+                </div>
+
+                <!-- <div class="col-lg-2">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="index.html">Features</a></li>
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="index.html">Services</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="col-lg-2 p-b-40">
+                    <h5>相关链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://wiki.scuctf.com/doku.php">Wiki</a></li>
+                        <li><a href="http://47.100.5.139/">练习平台</a></li>
+                        <!-- <li><a href="index.html">Terms &amp; Conditions</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <div>
+                        <h5>联系我们</h5>
+                        <ul class="list-unstyled">
+                            <li><strong class="font-secondary font-14">地址：</strong> 四川大学网络空间安全学院</li>
+                            <!-- <li><strong class="font-secondary font-14">Phone:</strong> (123) 456-7890, 123-4567 89 </li> -->
+                            <li><strong class="font-secondary font-14">Email:</strong> <a
+                                    href="mailto:example@example.com">example@example.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- end row -->
+        </div>
+        <!-- end container -->
+
+        <div class="footer-one-alt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="m-b-0 font-13 copyright">© 2018 - 2018 SCU-CTF协会</p>
+                    </div>
+                    <!-- <div class="col-sm-6">
+                        <ul class="list-inline footer-social-one m-b-0 float-right">
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="index.html#"><i class="pe-so-skype"></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery easing -->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <!--sticky header-->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <!--common script for all pages-->
+    <script src="js/jquery.app.js"></script>
+
+    <script type="text/javascript">
+        //sticky header on scroll
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 50) {
+                $(".sticky").addClass("is-sticky");
+            } else {
+                $(".sticky").removeClass("is-sticky");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
