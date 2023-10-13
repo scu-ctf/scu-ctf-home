@@ -97,7 +97,7 @@
     <div class="clearfix"></div>
 
     <script>
-        
+
         //跳转到md阅读界面
         function to_readmd(url) {
             console.log(url);
@@ -106,7 +106,7 @@
             localStorage.setItem('readmd', url);
 
             //跳转
-            window.location.href="./article.html?mdpath="+url;
+            window.location.href = "./article.html?mdpath=" + url;
         }
 
 
@@ -180,13 +180,69 @@
                 </div>
             </div>
 
-            <div class="text-center">
-                <a onclick='to_readmd("./writings/test.md")'>TEST</a><br>
-                <a onclick='to_readmd("./writings/test.md")'>TEST</a><br>
-                <a onclick='to_readmd("./writings/test.md")'>TEST</a><br>
-                <a onclick='to_readmd("./writings/test.md")'>TEST</a><br>
-                <a onclick='to_readmd("./writings/test.md")'>TEST</a><br>
+            <div class="text-center" id="writingslist">
+                正在获取文章列表，请稍候
             </div>
+
+            <style>
+                .xiranbtn {
+                    /* 清除背景色 */
+                    background: rgb(70, 205, 233); 
+                    /* 边框样式、颜色、宽度 */
+                    border: 2px solid #6243ff;
+                    /* 给边框添加圆角 */
+                    border-radius: 6px; 
+                    /* 字母转大写 */
+                    border: none;
+                    color: rgb(255, 255, 255);
+                    padding: 16px 30px;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 0% 40%;
+                    width: 20%;
+                    -webkit-transition-duration: 0.4s; /* Safari */
+                    transition-duration: 0.4s;
+                    cursor: pointer;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            </style>
+
+            <script src="js/jquery-3.0.0.min.js"></script>
+            <script>
+
+                $.ajax('writings/list.txt', {
+                    method: 'GET',
+                    success: function (result) {
+                        dome = result.split('\r\n');
+
+                        console.log(dome);
+
+                        writingslist=document.getElementById('writingslist');
+
+                        writingslist.innerHTML = "";
+
+                        for(var i = 0; i < dome.length; i++) {
+                            console.log(dome[i]);
+
+                            writingslist.innerHTML = writingslist.innerHTML + '<a onclick=\'to_readmd("./writings/'+ dome[i] +'.md")\'>'+ dome[i] +'</a><br>'
+
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err);
+                        document.getElementById('writingslist').innerHTML = err.responseText;
+                    }
+                });
+
+                function displayallwritings(){
+                    document.getElementById('writingslist').innerHTML = "功能暂未实现";
+                }
+
+            </script>
+
+            <button class="xiranbtn center" onclick="displayallwritings()"> 查看全部文章列表 </button>
 
         </div>
     </section>
