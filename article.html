@@ -117,7 +117,7 @@
                 },
                 error:function (err) {
                     console.log(err);
-                    document.getElementById('content').innerHTML = "<h1>" + err.state() + "</h1><br> 请检查路径[" + mdpath + "]是否正确";
+                    document.getElementById('content').innerHTML = "<h1>" + err.state() + "  " + err.status + "</h1><br> 请检查路径[" + mdpath + "]是否正确";
                 }
             });
 
