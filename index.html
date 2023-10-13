@@ -215,19 +215,17 @@
                 $.ajax('writings/list.txt', {
                     method: 'GET',
                     success: function (result) {
-                        dome = result.split('\r\n');
-
+                        dome = result.split(/\r?\n/);
                         console.log(dome);
+
 
                         writingslist=document.getElementById('writingslist');
 
                         writingslist.innerHTML = "";
 
-                        for(var i = 0; i < dome.length; i++) {
+                        for(var i = 0; i < Math.min(dome.length,10); i++) {
                             console.log(dome[i]);
-
                             writingslist.innerHTML = writingslist.innerHTML + '<a onclick=\'to_readmd("./writings/'+ dome[i] +'.md")\'>'+ dome[i] +'</a><br>'
-
                         }
                     },
                     error: function (err) {
@@ -237,12 +235,21 @@
                 });
 
                 function displayallwritings(){
-                    document.getElementById('writingslist').innerHTML = "功能暂未实现";
+                    writingslist=document.getElementById('writingslist');
+
+                    writingslist.innerHTML = "";
+
+                    for(var i = 0; i < dome.length; i++) {
+                        console.log(dome[i]);
+                        writingslist.innerHTML = writingslist.innerHTML + '<a onclick=\'to_readmd("./writings/'+ dome[i] +'.md")\'>'+ dome[i] +'</a><br>'
+                    }
+
+                    document.getElementById('displayallwritings').style.display = "none";
                 }
 
             </script>
 
-            <button class="xiranbtn center" onclick="displayallwritings()"> 查看全部文章列表 </button>
+            <button class="xiranbtn center" onclick="displayallwritings()" id="displayallwritings"> 查看全部文章列表 </button>
 
         </div>
     </section>
